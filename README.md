@@ -42,7 +42,7 @@ $ git clone https://github.com/mendesleu/Portal-Noticia-MVC.git
 
 ## Técnologias Usadas
 
-[Php](https://php.net/)
+[PHP](https://php.net/)
 [Apache](https://www.apachefriends.org/pt_br/download.html)
 [Bootstrao](https://getbootstrap.com/)
 [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
