@@ -4,7 +4,7 @@ if (isset($_POST['search'])) {
     $server = $_SERVER['SERVER_ADDR'];
     $s = $_POST['search'];
     $s = str_replace(' ', '-', $s);
-    header("Location: http://$server/Novo%20Projeto/search/$s");
+    header("Location: http://$server/Portal_Noticia_MVC/search/$s");
     $_POST = null;
 }
 

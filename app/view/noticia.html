@@ -1,6 +1,6 @@
 <script>
     $.ajax({
-        url: 'http://192.168.2.8/Novo%20Projeto/noticia.json',
+        url: 'http://192.168.2.8/Portal_Noticia_MVC/noticia.json',
         method: 'GET',
         dataType: 'json'
     }).done(function (result) {
@@ -75,7 +75,7 @@
                 console.log(nome, coment, idNoticia);
 
                 $.ajax({
-                    url: 'http://192.168.2.8/Novo%20Projeto/app/models/comment_gravar.php',
+                    url: 'http://192.168.2.8/Portal_Noticia_MVC/app/models/comment_gravar.php',
                     method: 'POST',
                     data: {
                         name: nome,
@@ -97,7 +97,7 @@
     function getComent() {
 
         $.ajax({
-            url: 'http://192.168.2.8/Novo%20Projeto/app/models/comment_ler.php',
+            url: 'http://192.168.2.8/Portal_Noticia_MVC/app/models/comment_ler.php',
             method: 'GET',
             data: {
                 id: <?= $url[1] ?>

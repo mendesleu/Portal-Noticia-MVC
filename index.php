@@ -13,7 +13,7 @@ require_once "app/core/core.php";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="titlePagina">Portal Noticia</title>
 
-  <link rel="stylesheet" href="http://192.168.2.8/Novo%20Projeto/assets/css/style.css">
+  <link rel="stylesheet" href="http://192.168.2.8/Portal_Noticia_MVC/assets/css/style.css">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -45,7 +45,7 @@ require_once "app/core/core.php";
 
     <div class="containerTop">
       <label>LOGO</label>
-      <form class="d-flex" role="search" action="http://192.168.2.8/Novo%20Projeto/app/controller/search.php" method="POST" onsubmit="return valSearch()">
+      <form class="d-flex" role="search" action="http://192.168.2.8/Portal_Noticia_MVC/app/controller/search.php" method="POST" onsubmit="return valSearch()">
         <input class="form-control me-2 col-lg-2" name="search" id="search" value="<?= $search ?>" type="search" placeholder="Pesquisar" aria-label="Search">
         <button class="btn btn-primary" type="submit">Search</button>
       </form>
@@ -59,7 +59,7 @@ require_once "app/core/core.php";
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="http://192.168.2.8/Novo%20Projeto/">Home</a>
+              <a class="nav-link active text-white" aria-current="page" href="http://192.168.2.8/Portal_Noticia_MVC/">Home</a>
             </li>
           </ul>
         </div>

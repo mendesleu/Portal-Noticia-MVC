@@ -1,6 +1,6 @@
 <script>
     $.ajax({
-        url: 'http://192.168.2.8/Novo%20Projeto/search.json',
+        url: 'http://192.168.2.8/Portal_Noticia_MVC/search.json',
         method: 'GET',
         dataType: 'json'
     }).done(function (result) {
@@ -21,7 +21,7 @@
                 <p class="card-text">
                 ${result[i].noticia}
                 </p>
-                <a href="/Novo%20Projeto/noticia/${result[i].id}/" class="btn btn-primary">Ver Notícia</a>
+                <a href="/Portal_Noticia_MVC/noticia/${result[i].id}/" class="btn btn-primary">Ver Notícia</a>
                 </div>
                 </div>
 
