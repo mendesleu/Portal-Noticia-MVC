@@ -11,7 +11,7 @@
     Status do projeto: Em Contrução
 </p>
 
-### Features
+## Features
 
 - [x] Leitura de notícia
 - [x] Comentários nas notícias
@@ -24,19 +24,19 @@
 ## Pré Requisitos
 
 <p>
-    Para rodar o projeto e necessário tem instalado um servidor Apache, com PHP e um banco de dados.
+    Para rodar o projeto e necessário tem instalado um servidor Apache, com PHP e um banco de dados.<br>
     Se necessário alterar o código utilize um editor de texto como o [VSCode](https://code.visualstudio.com/).
 </p>
 
 ## Instalação
 
-### Instale o Servidor Apache, PHP e Banco de Dados
+#### Instale o Servidor Apache, PHP e Banco de Dados
 -> Xampp<br>
 -> Mampp<br>
 -> Lampp<br>
 -> Ou pacotes separados
 
-### Clone o repositório dentro da pasta do Apache
+#### Clone o repositório dentro da pasta do Apache
 $ git clone https://github.com/mendesleu/Portal-Noticia-MVC.git
 
 
@@ -47,4 +47,4 @@ $ git clone https://github.com/mendesleu/Portal-Noticia-MVC.git
 [Bootstrao](https://getbootstrap.com/)
 [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
-### Autor: Leonardo Mendes Lima
+#### Autor: Leonardo Mendes Lima
