@@ -16,27 +16,27 @@
 - [x] Leitura de notícia
 - [x] Comentários nas notícias
 - [x] Pesquisa
-- [] Home page
-- [] Cadastro de notícias
-- [] Cadastro de categorias
-- [] Painel admin
+- [ ] Home page
+- [ ] Cadastro de notícias
+- [ ] Cadastro de categorias
+- [ ] Painel admin
 
-### Pré Requisitos
+## Pré Requisitos
 
 <p>
     Para rodar o projeto e necessário tem instalado um servidor Apache, com PHP e um banco de dados.
     Se necessário alterar o código utilize um editor de texto como o [VSCode](https://code.visualstudio.com/).
 </p>
 
-### Instalação
+## Instalação
 
-# Instale o Servidor Apache, PHP e Banco de Dados
--> Xampp
--> Mampp
--> Lampp
+### Instale o Servidor Apache, PHP e Banco de Dados
+-> Xampp<br>
+-> Mampp<br>
+-> Lampp<br>
 -> Ou pacotes separados
 
-# Clone o repositório dentro da pasta do Apache
+### Clone o repositório dentro da pasta do Apache
 $ git clone https://github.com/mendesleu/Portal-Noticia-MVC.git
 
 
