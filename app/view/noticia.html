@@ -1,0 +1,125 @@
+<script>
+    $.ajax({
+        url: 'http://192.168.2.8/Novo%20Projeto/noticia.json',
+        method: 'GET',
+        dataType: 'json'
+    }).done(function (result) {
+        // console.log(result);
+
+        document.getElementById('titlePagina').innerHTML = result[0].titulo + ' - Portal Notícia';
+
+        $('.noticia').prepend(
+            `<div class="titulo">${result[0].titulo}</div>`,
+            `<div class="autor">Autor: ${result[0].autor}</div>`,
+            `<div class="autor">Data: ${result[0].data.split('-').reverse().join('/')}</div>`,
+            `<div class="autor">Categoria: <a href="/Novo%20Projeto/search/${result[0].categoria}" class="linkCategoria">${result[0].categoria}</a></div>`,
+            `<div class="capa"><img src="../../assets/img/${result[0].capa}" style='width:100%'></div>`,
+            `<div class="noticiaTexto">${result[0].noticia}</div>`
+        )
+
+        $('#enviarComent').prepend(
+            `<input type="hidden" name="id" id="idNoticia" value="${result[0].id}">`
+        )
+
+    }).fail(function () {
+        alert('Erro Ajax Contate o Administrador');
+    })
+</script>
+
+<div class="noticia border-bottom">
+</div>
+
+<section class="containerComents border-bottom">
+
+    <div class="formularioComentNoticia">
+
+        <form method="POST" id="enviarComent" onclick="return valComent()">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" class="form-control mb-2" id="nome" required>
+            </div>
+            <div>
+                <label for="coments">Comentarios:</label>
+                <textarea name="comentario" maxlength="500" class="form-control mb-2" id="coments" required></textarea>
+            </div>
+            <button class="btn btn-primary">Enviar</button>
+        </form>
+
+    </div>
+
+    <div class="d-flex flex-column mb-3 cont-coments">
+    </div>
+
+
+</section>
+
+
+<script>
+
+    function valComent() {
+
+        let nome = document.getElementById('nome').value;
+        let coment = document.getElementById('coments').value;
+
+        if (nome == '' || coment == '') {
+            return false;
+        } else {
+
+            $('#enviarComent').submit(function (e) {
+                e.preventDefault();
+
+                let nome = $('#nome').val();
+                let coment = $('#coments').val();
+                let idNoticia = $('#idNoticia').val();
+
+                console.log(nome, coment, idNoticia);
+
+                $.ajax({
+                    url: 'http://192.168.2.8/Novo%20Projeto/app/models/comment_gravar.php',
+                    method: 'POST',
+                    data: {
+                        name: nome,
+                        comment: coment,
+                        id: idNoticia
+                    },
+                    dataType: 'JSON'
+                }).done(function (result) {
+                    $('#nome').val('');
+                    $('#coments').val('');
+                    getComent();
+                }).fail(function () {
+                    alert('Erro ajax envio');
+                })
+            })
+        }
+    }
+
+    function getComent() {
+
+        $.ajax({
+            url: 'http://192.168.2.8/Novo%20Projeto/app/models/comment_ler.php',
+            method: 'GET',
+            data: {
+                id: <?= $url[1] ?>
+            },
+            dataType: 'json'
+        }).done(function (result) {
+            console.log(result);
+
+            $('.cont-coments').html("") // Limpa o ajax ou melhor o HTML
+
+            for (let i = 0; i < result.length; i++) {
+                $('.cont-coments').prepend(
+                    `<div class="comentario border rounded">
+                        <label class="fw-bolder border-bottom" style="width: 100%;">${result[i].nome}</label>
+                        <p>${result[i].comentario}</p>
+                    </div>`
+                )
+            }
+
+        }).fail(function () {
+            alert('Erro Ajax Contate o Administrador');
+        })
+    }
+    getComent();
+</script>
