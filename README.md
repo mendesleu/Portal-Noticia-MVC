@@ -40,7 +40,7 @@
 $ git clone https://github.com/mendesleu/Portal-Noticia-MVC.git
 
 
-### Técnologias Usadas
+## Técnologias Usadas
 
 [Php](https://php.net/)
 [Apache](https://www.apachefriends.org/pt_br/download.html)
