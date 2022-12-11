@@ -25,7 +25,7 @@
 
 <p>
     Para rodar o projeto e necessário tem instalado um servidor Apache, com PHP e um banco de dados.<br>
-    Se necessário alterar o código utilize um editor de texto como o [VSCode](https://code.visualstudio.com/).
+    Se necessário alterar o código utilize um editor de texto como o VS Code.
 </p>
 
 ## Instalação
